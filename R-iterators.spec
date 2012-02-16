@@ -11,11 +11,15 @@ License:          Apache License (== 2.0)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
 Requires:         R-utils 
-%if %{without bootstrap}
+%if %{with bootstrap}
+Requires:         R-RUnit 
+%else
 Requires:         R-foreach R-RUnit 
 %endif
 BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-utils
-%if %{without bootstrap}
+%if %{with bootstrap}
+BuildRequires:    R-RUnit 
+%else
 BuildRequires:    R-foreach R-RUnit 
 %endif
 
