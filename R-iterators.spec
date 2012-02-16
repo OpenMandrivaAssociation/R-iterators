@@ -1,4 +1,4 @@
-%bcond_without    bootstrap
+%bcond_with       bootstrap
 %global packname  iterators
 %global rlibdir  %{_libdir}/R/library
 
