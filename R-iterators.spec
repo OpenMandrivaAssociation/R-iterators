@@ -10,17 +10,14 @@ Group:            Sciences/Mathematics
 License:          Apache License (== 2.0)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
-Requires:         R-utils 
-%if %{with bootstrap}
-Requires:         R-RUnit 
-%else
-Requires:         R-foreach R-RUnit 
+Requires:         R-utils R-RUnit
+%if %{without bootstrap}
+Requires:         R-foreach
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-utils
-%if %{with bootstrap}
-BuildRequires:    R-RUnit 
-%else
-BuildRequires:    R-foreach R-RUnit 
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex
+BuildRequires:    R-utils R-RUnit
+%if %{without bootstrap}
+BuildRequires:    R-foreach
 %endif
 
 %description
