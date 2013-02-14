@@ -1,15 +1,17 @@
-%bcond_without       bootstrap
+%bcond_with       bootstrap
 %global packname  iterators
 %global rlibdir  %{_libdir}/R/library
 
+%define debug_package %{nil}
+
 Name:             R-%{packname}
-Version:          1.0.5
-Release:          2
+Version:          1.0.6
+Release:          1
 Summary:          Iterator construct for R
 Group:            Sciences/Mathematics
 License:          Apache License (== 2.0)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
+Source0:          http://cran.r-project.org/src/contrib/iterators_1.0.6.tar.gz
 Requires:         R-utils 
 %if %{with bootstrap}
 Requires:         R-RUnit 
@@ -55,15 +57,3 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %{rlibdir}/%{packname}/examples
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/unitTests
-
-
-%changelog
-* Thu Feb 16 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0.5-2
-+ Revision: 775488
-- Rebuild.
-
-* Thu Feb 16 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0.5-1
-+ Revision: 775327
-- Import R-iterators
-- Import R-iterators
-
