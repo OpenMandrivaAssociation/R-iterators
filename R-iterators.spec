@@ -6,7 +6,7 @@
 
 Name:             R-%{packname}
 Version:          1.0.6
-Release:          1
+Release:          2
 Summary:          Iterator construct for R
 Group:            Sciences/Mathematics
 License:          Apache License (== 2.0)
