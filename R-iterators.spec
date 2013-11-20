@@ -1,4 +1,4 @@
-%bcond_without       bootstrap
+%bcond_with       bootstrap
 %global packname  iterators
 %global rlibdir  %{_libdir}/R/library
 
@@ -6,7 +6,7 @@
 
 Name:             R-%{packname}
 Version:          1.0.6
-Release:          2
+Release:          3
 Summary:          Iterator construct for R
 Group:            Sciences/Mathematics
 License:          Apache License (== 2.0)
